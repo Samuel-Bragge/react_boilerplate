@@ -1,0 +1,167 @@
+$color:rgba(rgb(65, 134, 224), .5);
+
+body {
+	font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.button {
+	background-color: black;
+	color:white;
+	border-radius: 5px;
+	font:{
+		size:24px;
+	}
+	&:hover {
+		background-color: $color;
+		color:black;
+		font-weight: bold;
+		border:2px solid black;
+	}
+	&:active {
+		transform: translateY(2px);
+	}
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	width:500px;
+	align-items: center;
+	input {
+		border-radius: 3px;
+		margin:10px 0;
+		padding:5px;
+		border:1px solid $color;
+		font-size: 16px;
+		width: 80%;
+	}
+	label {
+		text-align: center;
+		font:{
+			size:30px;
+			weight:200;
+		}
+	}
+	ul {
+		list-style-type: none;
+	}
+	img {
+		border-radius: 50%;
+		border:2px solid black;
+		height:260px;
+	}
+}
+
+.header {
+	text-align: center;
+	font:{
+		size:30px;
+		weight:200;
+	}
+}
+
+.App {
+	max-width: 1200px;
+	margin:0 auto;
+	.MainNav {
+		border-bottom: 1px groove $color;
+		margin-right: 15px;
+		list-style-type: none;
+		display: flex;
+		li {
+			margin: 10px;
+			cursor: pointer;
+			&:hover{
+				transform: translateY(-1px);
+			}
+			a {
+
+				text-decoration: none;
+				color:$color;
+			}
+		}
+		.currentPage {
+			font-weight: bold;
+			color:rgb(161, 28, 44);
+			text-decoration: none;
+		}
+	}
+
+	.Home {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.Battle {
+		.PlayerPreview {
+			.battlePic {
+				border-radius: 50%;
+				border:2px ridge black;
+				box-shadow: 0 0 50px $color;
+			}
+			.username {
+				font-weight: bold;
+			}
+			.reset {
+				cursor: pointer;
+				color:red;
+				text-align: center;
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+
+	.Result {
+		.winner {
+			box-shadow: 0 0 50px green;
+		}
+		.loser {
+			box-shadow: 0 0 50px red;
+		}
+	}
+
+	.Popular {
+		.PopNav {
+			display: flex;
+			justify-content: center;
+			list-style-type: none;
+			li {
+				margin:10px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+		}
+		.RepoGrid {
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			.repoItem {
+				margin:20px;
+				text-align: center;
+				.rank {
+					font-size: 20px;
+				}
+				.space-list-items {
+					list-style-type: none;
+					margin-bottom: 7px;
+					.avatar {
+						width:150px;
+						border-radius: 50%;
+					}
+				}
+
+			}
+		}
+	}
+}

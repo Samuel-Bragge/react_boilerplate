@@ -1,17 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
-import './index.css';
+import './style/normalize.css';
+import './style/index.css';
+import App from './components/App';
 
 
-class App extends React.Component {
-    render(){
-        return(
-            <div>
-                Hello World!
-            </div>
-        );
-    }
-}
 
-
-render(<App/>, document.getElementById('app'));
+render(
+	<App/>,
+	document.getElementById('app')
+);
